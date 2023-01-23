@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+{% block googleAnalytics %}
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5FS4HDX');
+</script>
+<!-- End Google Tag Manager -->
+{% endblock %}
+
+{% block meta %}
+<!-- Meta -->
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- set the keywords of you site -->
+<meta name="keywords" content="{% block keywords %}Bar Quito, Resto Bar, Bar UTE, Bar universidades, Restaurante Bar, Gastro Bar{% endblock %}">
+<!-- set the descritpion of you site -->
+<meta name="description" content="{% block description %}El Hueco Resto Bar es el mejor lugar para disfrutar entre amigos{% endblock %}">
+<!-- set author of your site -->
+<meta name="author" content="Franklin Alvear">
+<!-- Google Search Console -->
+<meta name="google-site-verification" content="QbcqWnO2SuhXUJcL6V_ShkjSFgEIGReTnv2V30FQ8WA" />
+{% endblock %}
+
+{% block opengraph %}
+<!-- Schema.org markup for Google+ -->
+<meta itemprop="name" content="El Hueco">
+<meta itemprop="description" content="Resto Bar Estudiantes Universitarios">
+<meta itemprop="image" content="https://franklinalvear.com/bundles/portada/img/photos/doctor/avatar-sm.png">
+
+<!-- Open Graph data -->
+<meta property="og:title" content="El Hueco" />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="{{ app.request.uri }}" />
+<meta property="og:image" content="https://franklinalvear.com/bundles/portada/img/photos/doctor/avatar-sm.png" />
+<meta property="og:description" content="Resto Bar Estudiantes Universitarios" />
+<meta property="og:locale" content="es">
+<meta property="og:site_name" content="franlkinalvear" />
+<!--meta property="fb:app_id" content="1522670851135903" /-->
+{% endblock %}
+
+{% block favicons %}
+<!-- Favicons -->
+<link rel="shortcut icon" type="image/x-icon" href="{{ asset('bundles/portada/img/favicon.ico') }}">
+<!-- Favicons TODO -->
+<!--link rel="apple-touch-icon" href="{#{ asset('bundles/portada/img/favicon_60x60.png') }}">
+<link rel="apple-touch-icon" sizes="76x76" href="{{ asset('bundles/portada/img/favicon_76x76.png') }}">
+<link rel="apple-touch-icon" sizes="120x120" href="{{ asset('bundles/portada/img/favicon_120x120.png') }}">
+<link rel="apple-touch-icon" sizes="152x152" href="{{ asset('bundles/portada/img/favicon_152x152.png') }#}"-->
+<!-- Favicons TODO -->
+{% endblock %}
+
+{% block title %}
+<!-- Title -->
+<title>El Hueco | Resto Bar para Estudiantes Universitarios</title>
+{% endblock %}
+
+{% block css %}
+<!-- CSS Plugins -->
+<link rel="stylesheet" href="{{ asset('bundles/portada/plugins/bootstrap/css/bootstrap.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/portada/plugins/flexslider/flexslider.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/portada/plugins/font-awesome/css/font-awesome.min.css') }}" />
+
+<!-- CSS Base -->
+<link rel="stylesheet" href="{{ asset('bundles/portada/css/content-box.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/portada/css/components.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/portada/css/magnific-popup.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/portada/css/social.stream.css') }}" />
+<link rel="stylesheet" href="{{ asset('bundles/portada/css/animations.css') }}" />
+<link id="theme" rel="stylesheet" href="{{ asset('bundles/portada/css/style.css') }}" />
+
+<!-- CSS Toastr -->
+<link rel="stylesheet" href="{{ asset('bundles/portada/css/toastr.min.css') }}">
+{% endblock %}
+
+{% block snippets %}
+<!-- rich snippets -->
+<!--script type="application/ld+json">
+    {
+        "@context": "http://schema.org/",
+        "@type": "Person",
+        "name": "Franklin Alvear",
+        "jobTitle": "Cirujano Plástico",
+        "telephone": "(593)0990459900",
+        "url": "http://franklinalvear.com",
+        "email": "franklin@hospi.me",
+        "memberOf": [{
+            "@type": "Thing",
+            "name": "Sociedade Brasileira de Cirurgía Plástica e Estética",
+            "description": "Sociedad Científica Brasilera",
+            "url": "http://www.sbmcpe.com.br/",
+            "image": "http://www.sbmcpe.com.br/wp-content/uploads/2016/09/15-anos-sbmcpe-peq.png"
+        }],
+        "brand": [{
+            "@type": "Thing",
+            "name": "hospi.me",
+            "description": "Hospital Digital",
+            "url": "https://hospi.me",
+            "image": "https://hospi.me/thumbnail.png"
+        }],
+        "owns": [{
+            "@type": "Thing",
+            "name": "hospi.me",
+            "description": "Hospital Digital",
+            "url": "https://hospi.me",
+            "image": "https://hospi.me/thumbnail.png"
+        }],
+        "sameAs": [
+            "hhttps://www.facebook.com/franklinalvear.cirujanoplastico",
+            "https://twitter.com/dr_franklear",
+            "https://www.linkedin.com/in/franklin-alvear/",
+            "https://www.instagram.com/franklin_alvear"
+        ]
+    }
+</script-->
+{% endblock %}
+
+</head>
+
+{% block bodyclass %}
+<body>
+{% endblock %}
+
+{% block preloader %}
+<!-- Preloader -->
+<div id="preloader"></div>
+{% endblock %}
+
+{% block header %}
+<header class="fixed-top scroll-change" data-menu-anima="fade-left">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="navbar-main navbar-middle">
+            <div class="container">
+                <div class="scroll-hide">
+                    <div class="container">
+                        <a class="navbar-brand center" href="#">
+                            <img alt="" src="{{ asset('bundles/portada/img/logo.png') }}" />
+                        </a>
+                    </div>
+                </div>
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html"><img alt="" src="{{ asset('bundles/portada/img/logo.png') }} /></a>
+                    <button type="button" class="navbar-toggle">
+                        <i class="fa fa-bars"></i>
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav no-margins">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a href="events.html" class="dropdown-toggle" data-toggle="dropdown" aria-expanded="false">Events <i class="caret"></i></a>
+                            <ul class="dropdown-menu multi-level">
+                                <li><a href="events.html">All events</a></li>
+                                <li><a href="single-event.html">Single event</a></li>
+                                <li><a href="single-event-big.html">Big single event</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="gallery.html">Gallery</a></li>
+                        <li class="scroll-show"><a href="index.html"><img src="{{ asset('bundles/portada/img/logo-small.png') }} alt="logo"></a></li>
+                        <li><a href="products.html">Products</a></li>
+                        <li><a href="blog.html">Blog</a></li>
+                        <li><a href="contacts.html">Contacts</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+{% endblock %}
+
+{% block content %}
+    
+{% endblock %}
+
+
+{% block footer %}
+<!-- Footer -->
+<footer>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <hr class="space xs" />
+                <div class="copy-row">
+                    <div class="tag-row">
+                        <span>El Hueco © <script>document.write(new Date().getFullYear());</script><br></span>
+                        <span>47 Chandos Place London WC2N 4HS</span>
+                        <span>020 7836 0291</span>
+                        <span>info@soundoflondon.com</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4 text-right">
+                <div class="btn-group social-group">
+                    <a target="_blank" href="#"><i class="fa fa-facebook"></i></a>
+                    <a target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+                    <a target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+                    <a target="_blank" href="#"><i class="fa fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <link rel="stylesheet" href="scripts/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <script async src="scripts/bootstrap/js/bootstrap.min.js"></script>
+    <script src="scripts/imagesloaded.min.js"></script>
+    <script src='scripts/flexslider/jquery.flexslider-min.js'></script>
+    <script src='scripts/parallax.min.js'></script>
+    <script src='scripts/jquery.magnific-popup.min.js'></script>
+    <script src='scripts/jquery.progress-counter.js'></script>
+    <script src='scripts/jquery.twbsPagination.min.js'></script>
+    <script src='scripts/social.stream.min.js'></script>
+    <script src='scripts/jquery.spritely.min.js'></script>
+    <script src="scripts/smooth.scroll.min.js"></script>
+</footer>
+<!-- Footer / End -->
+{% endblock %}
+
+
+{% block java %}
+<!-- JS Plugins -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="{{ asset('bundles/portada/js/script.js') }}"></script>
+<script async src="{{ asset('bundles/portada/plugins/bootstrap/js/bootstrap.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/imagesloaded.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/plugins/flexslider/jquery.flexslider-min.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/parallax.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/jquery.magnific-popup.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/jquery.progress-counter.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/jquery.twbsPagination.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/social.stream.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/jquery.spritely.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/js/smooth.scroll.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/plugins/typed.js/dist/typed.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/plugins/easy-pie-chart/dist/jquery.easypiechart.min.js') }}"></script>
+<script src="{{ asset('bundles/portada/plugins/snapsvg/dist/snap.svg-min.js') }}"></script>
+<script src="{{ asset('bundles/portada/plugins/isotope-layout/dist/isotope.pkgd.min.js') }}"></script>
+
+<script src="{{ asset('bundles/portada/plugins/jquery.mb.ytplayer/dist/jquery.mb.YTPlayer.min.js') }}"></script>
+
+<!-- JS Google Map -->
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBmxuQkO5LEk3JjuweMlTg-fMJnvsAFedg"></script>
+
+<!-- JS Toastr -->
+<script src="{{ asset('bundles/portada/js/toastr.min.js') }}"></script>
+
+<!-- JS Core -->
+<script src="{{ asset('bundles/portada/js/core.js') }}"></script>
+{% endblock %}
+
+{% block script %}
+    <script type="text/javascript">
+    $(function(){
+        $('#submit').attr('disabled','disabled');
+        $('#message_table_email').keyup(function(){
+            var email = $(this).val();
+            if (validateEmail(email)) {
+                $('#submit').removeAttr('disabled');
+                console.log('enabled');
+            } else {
+                $('#submit').attr('disabled','disabled');
+                console.log('disabled');
+            }
+        });
+
+        {% for flashMessage in app.session.flashbag.get('success') %}
+            toastr.success('{{ flashMessage }}', { timeOut: 1500 });
+        {% endfor %}
+        {% for flashMessage in app.session.flashbag.get('info') %}
+            toastr.info('{{ flashMessage }}', { timeOut: 2500 });
+        {% endfor %}
+    });
+
+    function validateEmail(sEmail) {
+        var filter = /^([\w-\.]+)@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.)|(([\w-]+\.)+))([a-zA-Z]{2,4}|[0-9]{1,3})(\]?)$/;
+        if (filter.test(sEmail)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    </script>
+    <script type="text/javascript">
+        if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+         $('#start').toggleClass('dark light');
+         $('#start').toggleClass('bg-dark bg-light');
+         $('#start').data('scheme', 'light');
+        }
+    </script>
+{% endblock %}
+
+</body>
+
+</html>

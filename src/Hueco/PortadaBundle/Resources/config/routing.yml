@@ -1,0 +1,3 @@
+portada_homepage:
+    path:     /
+    defaults: { _controller: PortadaBundle:Default:index }
