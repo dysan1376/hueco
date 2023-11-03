@@ -4,7 +4,7 @@ set :domain,      "#{user}@192.241.137.161"
 set :deploy_to,   "/var/www/html/#{application}"
 set :app_path,    "app"
 
-#set :repository,  "file:///Applications/MAMP/htdocs/hospi"
+#set :repository,  "git@github.com:dysan1376/hueco.git"
 set :repository,  "https://github.com/dysan1376/hueco.git"
 set :scm,         :git
 #set :deploy_via,  :copy
@@ -50,6 +50,8 @@ namespace :deploy do
 		run(" sudo chmod -R 777 #{release_path}/app/cache #{release_path}/app/logs")
 	end
 end
+
+ssh_options[:keys] = %w(/Users/franklin/.ssh/id_rsa)
 
 
 # Be more verbose by uncommenting the following line
