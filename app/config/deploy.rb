@@ -53,7 +53,7 @@ namespace :deploy do
 end
 
 #ssh_options[:keys] = %w(/Users/franklin/.ssh/id_rsa)
-ssh_options[:forward_agent] = true
+#ssh_options[:forward_agent] = true
 
 
 # Be more verbose by uncommenting the following line
