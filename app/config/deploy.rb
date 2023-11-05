@@ -1,6 +1,6 @@
 set :application, "hueco"
 set :user,        "root"
-set :domain,      "#{user}@167.99.10.247"
+set :domain,      "#{user}@167.99.239.218"
 set :deploy_to,   "/var/www/html/#{application}"
 set :app_path,    "app"
 
