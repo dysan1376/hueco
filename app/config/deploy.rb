@@ -4,8 +4,8 @@ set :domain,      "#{user}@167.99.239.218"
 set :deploy_to,   "/var/www/html/#{application}"
 set :app_path,    "app"
 
-set :repository,  "git@github.com:dysan1376/hueco.git"
-#set :repository,  "https://github.com/dysan1376/hueco.git"
+#set :repository,  "git@github.com:dysan1376/hueco.git"
+set :repository,  "https://github.com/dysan1376/hueco.git"
 set :scm,         :git
 #set :deploy_via,  :copy
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
