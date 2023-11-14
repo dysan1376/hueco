@@ -5,7 +5,7 @@ set :deploy_to,   "/var/www/html/#{application}"
 set :app_path,    "app"
 
 #set :repository,  "git@github.com:dysan1376/hueco.git"
-set :repository,  "https://github.com/dysan1376/hueco.git"
+set :repository,  "https://dysan1376:3XL8Kr31@github.com/dysan1376/hueco.git"
 set :scm,         :git
 #set :deploy_via,  :copy
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
@@ -31,10 +31,13 @@ set  :copy_vendors,   true
 
 set  :keep_releases,  3
 
-#set :ssh_options, {
-# verbose: :debug
-#}
-default_run_options[:pty] = true
+#ssh_options[:use_agent] = false
+#ssh_options[:verbose] = :debug
+#ssh_options[:auth_methods] = :publickey
+#ssh_options[:keys] = %w(/Users/franklin/.ssh/id_ed25519)
+#ssh_options[:forward_agent] = false
+
+#default_run_options[:pty] = true
 
 after "deploy:update", "deploy:mkdirs", "deploy:cleanup"
 
@@ -52,9 +55,8 @@ namespace :deploy do
 	end
 end
 
-#ssh_options[:keys] = %w(/Users/franklin/.ssh/id_rsa)
-#ssh_options[:forward_agent] = true
+
 
 
 # Be more verbose by uncommenting the following line
-logger.level = Logger::MAX_LEVEL
+#logger.level = Logger::MAX_LEVEL
